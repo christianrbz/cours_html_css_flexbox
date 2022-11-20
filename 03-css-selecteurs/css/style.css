@@ -1,0 +1,56 @@
+/* sélecteur universel *{} pour redéfinir toutes les marges externes et internes en leur donnant une valeur de 0. Beaucoup de développeurs préfèrent avoir la main sur les margin et padding plutot que de devoir gérer des valeurs par défaut des navigateurs */
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+h1{
+    /* pour centrer le texte dans mon bloc */
+    text-align: center;
+    /* pour donner un bg-color au bloc <h1> */
+    background-color: bisque;
+    /* pour donner une largeur de 25% par rapport au bloc parent (<body>) qlq soit la taille de l'écran (desktop, tablette ou mobile ...je fais du responsive */
+    width: 25%;
+    /* je centre mon bloc <h1> dans son bloc parent <body> (margin: auto ou margin: 0 auto sert à cela */
+    margin: auto;
+}
+
+/* je cible tous les paragraphes de la balise section (sans impacter d'autres paragraphes qui seraient en dehors de cette balise) */
+section p{
+    color: red;
+}
+
+/* la pseudo classe :first-child va cibler exclusivement le premier enfant (le premier paragraphe du bloc parent, la balise section */
+section p:first-child{
+    color: blue;
+}
+
+/* :last-child va impacter le dernier enfant qui hérite de la balise section */
+section p:last-child{
+    color: aqua;
+}
+
+/* la pseudo classe :nth-child demande un parametre dans la parenthèse pour savoir quel enfant elle doit cibler */
+/* en lui donnant en argument even, elle va cibler tous les enfants pairs (le deuxième, le quatrième etc...) */
+/* on remarque que last-child, le dixième n'est plus de couleur aqua mais blue-violet. C'est normal, le navigateur donne la priorité à la dernière instruction */
+section p:nth-child(even){
+    color:blueviolet;
+}
+
+/* l'argument odd va cibler tous les impairs */
+/* first-child n'est plus de couleur blue mais brown, dernière instruction */
+section p:nth-child(odd){
+    color:brown;
+}
+
+/* je peux donner en argument un chiffre pour qu'il me cible cet enfant */
+section p:nth-child(5){
+    font-size: 1.5rem;
+}
+
+/* en séparant les balises avec une virgule, je peux en une seule instruction cibler différentes balises qui auront le même comportement */
+section p:nth-child(3), section p:nth-child(9){
+    font-size: 2.5rem;
+}
+
+

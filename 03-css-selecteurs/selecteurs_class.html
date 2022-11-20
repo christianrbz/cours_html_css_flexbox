@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les sélecteurs de class et id</title>
+
+    <link rel="stylesheet" href="css/style_class.css">
+</head>
+<body>
+
+    <h1>Les sélecteurs de classes et identifiants</h1>
+
+    <p>Les sélecteurs de classes ou d'identifiants ne vont plus se baser sur le nom d'une balise pour faire de la mise en forme en CSS, mais sur le nom d'une classe ou d'un identifiant.</p>
+    <p>Ainsi, je pourrais avoir plusieurs paragraphes &lt;p>, mais en donnant un nom de classe à l'un d'entre eux, je pourrais ne cibler que lui sans impacter les autres</p>
+
+    <div class="zone1">Zone 1</div>
+
+    <div class="zone2">Zone 2<span class="lime"> Moi je suis vert</span></div>
+
+    <div id="zone3">Zone 3</div>
+
+    <div class="zone4">
+        <ul>
+            <li>Zone 4-1</li>
+            <li>Zone 4-2</li>
+            <li>Zone 4-3</li>
+            <li>Zone 4-4</li>
+        </ul>
+    </div>
+
+    <!-- si le bloc/div zone 5 doit avoir la même mise en page, mise en forme que le bloc zone 1, je peux lui donner le même nom de classe, c'est a dire class="zone1" -->
+    <div class="zone1">Zone 5</div>
+
+    <!-- par contre, je ne peux pas partager un id avec un autre bloc, ce n'est pas permis, la W3C santionnera le code (et google le référencement). Cela fonctionnera sur le navigateur, mais ce n'est pas permis -->
+    <!-- on peut partager une classe entre plusieurs balises, mais pas un id, il est unique -->
+    <div id="zone3">Zone 6</div>
+    
+    
+</body>
+</html>

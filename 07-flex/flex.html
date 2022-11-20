@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntaxe Flex</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Zoning Flex</h1>
+
+    <!-- exemple -->
+    <h2>Exemple 1</h2>
+
+    <section class="container">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item1-1">Zone 1</div>
+        <div class="item item1-2">Zone 2</div>
+        <div class="item item1-3">Zone 3</div>
+    </section>
+    <!-- fin d'exemple -->
+
+    <p>la propriété display:flex permet d'afficher les blocs à l'horizontale, même si les balises ont un comportement de type bloc</p>
+    <p>la seconde propriété flex:auto permet aux blocs enfants de .container d'occuper sa largeur totale, tout en se la répartissant demanière égale</p>
+    <p>Cela fonctionnera qlq soit le nombre de blocs. 3 comme au-dessus ou 2 ou 4 comme en-dessous</p>
+    <!-- exemple -->
+    <h2>Exemple 2</h2>
+
+    <section class="container">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item2-1">Zone 1</div>
+        <div class="item item2-2">Zone 2</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 3</h2>
+
+    <section class="container">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item3-1">Zone 1</div>
+        <div class="item item3-2">Zone 2</div>
+        <div class="item item3-3">Zone 3</div>
+        <div class="item item3-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 4</h2>
+
+    <p>4è exemple, en donnant une taille préalable à l'un des blocs (500 pixels)</p>
+    <p>Dans ce cas, le bloc prend cette largeur, et les deux autres vont occuper de manière égale l'espace qui leur reste</p>
+
+    <section class="container">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item4-1">Zone 1</div>
+        <div class="item item4-2">Zone 2</div>
+        <div class="item item4-3">Zone 3</div>
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 5</h2>
+
+    <p>la propriété flex grow pour aussi gérer les tailles des blocs enfants (la répartition de l'espace se fera selon la valeur donnée à flex-grow:</p>
+    <p>ecrire flex-grow: avec pour valeur 1, revient à ne pas spécifier le flex-grow. La zone 4 n'a pas de flex-grow en CSS, et pourtant sa taille est identique à zone 1, qui a en css flex-grow:1</p>
+    <section class="container">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item5-1">Zone 1</div>
+        <div class="item item5-2">Zone 2</div>
+        <div class="item item5-3">Zone 3</div>
+        <div class="item item5-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 6</h2>
+
+    <p>pour modifier l'ordre d'apparition des blocs, je peux utiliser la propriété order et donner un ordre d'affichage</p>
+    <p>Ci dessous, zone 4 à un order :1, tandis que zone 1 à un order:4. zone 2 et zone 3 ont le même order :2. Comme il est similaire, alors ce qui va les différencier, c'est l'ordre dans lequel ils ont été codé</p>
+
+    <section class="container">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item6-1">Zone 1</div>
+        <div class="item item6-2">Zone 2</div>
+        <div class="item item6-3">Zone 3</div>
+        <div class="item item6-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 7</h2>
+
+    <p>Pour inverser totalement l'ordre des blocs, rapidement, je peux utiliser un flex-direction: row-reverse (sur le bloc parent, en lui donnant une seconde classe, exemple container7)</p>
+    <p>Attention, ne pas utiliser column-reverse, même si le nom semble évocateur. Le résultat ne sera pas le bon</p>
+
+    <section class="container container7">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item7-1">Zone 1</div>
+        <div class="item item7-2">Zone 2</div>
+        <div class="item item7-3">Zone 3</div>
+        <div class="item item7-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 8</h2>
+
+    <p>La propriété justify-content: avec pour valeur center, va centrer les blocs enfants dans leur bloc parent (classe container8). A condition d'annuler le flex:auto qui va les faire occuper la largeur totale du bloc. Je ne centre rien si tout est occupé.</p>
+    <p>J'annule flex:auto avec un flex:none pour chaque bloc enfant</p>
+
+    <section class="container container8">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item8-1">Zone 1</div>
+        <div class="item item8-2">Zone 2</div>
+        <div class="item item8-3">Zone 3</div>
+        <div class="item item8-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 9</h2>
+
+    <p>Avec justify-content: end, tous les blocs enfants vont s'aligner à droite du bloc parent </p>
+
+    <section class="container container9">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item9-1">Zone 1</div>
+        <div class="item item9-2">Zone 2</div>
+        <div class="item item9-3">Zone 3</div>
+        <div class="item item9-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 10</h2>
+
+    <p>Avec justif-content:start tous les enfants vont être alignés à gauche du parent</p>
+
+    <section class="container container10">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item10-1">Zone 1</div>
+        <div class="item item10-2">Zone 2</div>
+        <div class="item item10-3">Zone 3</div>
+        <div class="item item10-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+    <!-- fin d'exemple -->
+
+    <!-- exemple -->
+    <h2>Exemple 11</h2>
+
+    <p>Avec justify-content: space-between, on aura les deux blocs latéraux collés à leurs bordures respectivement, laissant un maximum d'espace au milieu</p></p>
+
+    <section class="container container11">
+        <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+        <div class="item item11-1">Zone 1</div>
+        <div class="item item11-2">Zone 2</div>
+        <div class="item item11-3">Zone 3</div>
+        <div class="item item11-4">Zone 4</div>
+        <!-- <div class="item item1-3">Zone 3</div> -->
+    </section>
+   <!-- fin d'exemple -->
+
+   <!-- exemple -->
+   <h2>Exemple 12</h2>
+
+   <p>Avec space-around, la répartition des colonnes sur la largeur se fera de manière plus harmonieuse qu'avec space-between</p>
+
+   <section class="container container12">
+       <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+       <div class="item item12-1">Zone 1</div>
+       <div class="item item12-2">Zone 2</div>
+       <div class="item item12-3">Zone 3</div>
+       <div class="item item12-4">Zone 4</div>
+       <!-- <div class="item item1-3">Zone 3</div> -->
+   </section>
+  <!-- fin d'exemple -->
+
+  <!-- exemple -->
+  <h2>Exemple 13</h2>
+
+  <p>Avec space-evenly, la répartition des colonnes sur la largeur se fera de manière plus harmonieuse mais différente de space-between</p>
+
+  <section class="container container13">
+      <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+      <div class="item item13-1">Zone 1</div>
+      <div class="item item13-2">Zone 2</div>
+      <div class="item item13-3">Zone 3</div>
+      <div class="item item13-4">Zone 4</div>
+      <!-- <div class="item item1-3">Zone 3</div> -->
+  </section>
+ <!-- fin d'exemple -->
+
+ <!-- exemple -->
+ <h2>Exemple 14</h2>
+
+ <p></p>
+
+ <section class="container container14">
+     <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+     <div class="item item14-1">Zone 1</div>
+     <div class="item item14-2">Zone 2</div>
+     <div class="item item14-3">Zone 3</div>
+     <div class="item item14-4">Zone 4</div>
+     <!-- <div class="item item1-3">Zone 3</div> -->
+ </section>
+<!-- fin d'exemple -->
+
+<!-- exemple -->
+<h2>Exemple 15</h2>
+
+<p></p>
+
+<section class="container container15">
+    <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+    <div class="item item15-1">Zone 1</div>
+    <div class="item item15-2">Zone 2</div>
+    <div class="item item15-3">Zone 3</div>
+    <div class="item item15-4">Zone 4</div>
+    <!-- <div class="item item1-3">Zone 3</div> -->
+</section>
+<!-- fin d'exemple -->
+
+<!-- exemple -->
+<h2>Exemple 16</h2>
+
+<p></p>
+
+<section class="container container16">
+    <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+    <div class="item item16-1">Zone 1</div>
+    <div class="item item16-2">Zone 2</div>
+    <div class="item item16-3">Zone 3</div>
+    <div class="item item16-4">Zone 4</div>
+    <!-- <div class="item item1-3">Zone 3</div> -->
+</section>
+<!-- fin d'exemple -->
+
+<!-- exemple -->
+<h2>Exemple 17</h2>
+
+<p></p>
+
+<section class="container container17">
+    <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+    <div class="item">Zone 1</div>
+    <div class="item">Zone 2</div>
+    <div class="item">Zone 3</div>
+    <div class="item">Zone 4</div>
+    <div class="item">Zone 5</div>
+    <div class="item">Zone 6</div>
+    <div class="item">Zone 7</div>
+    <div class="item">Zone 8</div>
+    <div class="item">Zone 9</div>
+    <!-- <div class="item item1-3">Zone 3</div> -->
+</section>
+<!-- fin d'exemple -->
+
+<!-- exemple -->
+<h2>Exemple 18</h2>
+
+<p></p>
+
+<section class="container container18">
+    <!-- un bloc, dans l'attribut class, peut recevoir plusieurs noms de classes, chacunes avec leurs spécificités -->
+    <div class="item18 item18-1">Zone 1</div>
+    <div class="item18 item18-2">Zone 2</div>
+    <div class="item18 item18-3">Zone 3</div>
+    <div class="item18 item18-4">Zone 4</div>
+    <!-- <div class="item item1-3">Zone 3</div> -->
+</section>
+<!-- fin d'exemple -->
+
+
+
+    
+    
+</body>
+</html>

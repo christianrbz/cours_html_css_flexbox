@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* -- PARTIE HEADER : SAV, logo et formulaire de contact */
+header {
+    text-align: center;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+/* Modification de la taille du logo */
+img {
+    width: 7rem;
+}
+
+
+/* Titre : formulaire de contact */
+h2 {
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: .8rem;
+}
+
+
+
+/* -- PARTIE BARRE DE NAVIGATION -- */
+/* Pour aligner la barre de navigation, et pour enlever les puces */
+nav ul li {
+    display: inline;
+    list-style: none;
+}
+
+/* Modification de la barre de navigation */
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    padding: 0 2rem 0 2rem;
+    border-left: 1px solid black;
+    font-size: 1.5rem;
+}
+
+nav ul li a:hover {
+    font-weight: bolder;
+    color: white;
+}
+
+nav {
+    background-color: lightgray;
+    padding: .5rem;
+}
+
+.contact {
+    border-right: 1px solid black;
+}
+
+
+
+/* -- PARTIE FORMULAIRE -- */
+form {
+    display: table;
+    margin: auto;
+    padding: 2.5rem 0;
+    font-size: 1.2rem;
+}
+
+input {
+    margin: .2rem 0;
+    font-size: 1.2rem;
+}
+
+select {
+    font-size: .9rem;
+}
+
+.bouton {
+    font-size: 0.9rem;
+}
+
+
+/* -- PARTIE FOOTER -- */
+footer {
+    text-align: center;
+}

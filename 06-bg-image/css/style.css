@@ -1,0 +1,51 @@
+body{
+    /* on peut insérer une image en arrière plan en appelant background-image...mais avec background seulement, cela fonctionne aussi */
+    /* le ../ permet de sortir du dossier css (dans lequel je code) pour aller dans le dossier img, là ou se trouve les images   */
+
+    /* pour l'image de l'éléphant */
+    /* background-image: url(../img/bg-image.jpg); */
+    /* si l'image est trop petite, elle va etre multipliée pour recouvrir tout l'ecran. la propriété background-size:cover permet de couvrir tout l'ecran sans qu'elle soit multipliée (elle va etre agrandie)
+
+    /* pour l'image hd récupérée via l'URL */
+    /* Si elle est trop grande, background-size: cover fera le même travail, en inversé, il la réduira jusqu'à ce qu'elle ait la bonne taille
+    attention, ne pas afficher d'images sur votre site si elle sont récupérées via une URL (et pas dans votre dossier img). Le jour ou le propriétaire de la photo la retire du web (ou la deplace) l'url ne mènera plus nulle part....icone image brisée à la place */
+    /* background-image: url(https://www.wallpaperup.com/uploads/wallpapers/2013/03/24/61377/b28524b209e8e798c8fe40a6f7fa7a57.jpg); */
+    
+    /* background-size: cover; */
+    /* permet que l'image ne soitp as scrollable (en même temps quel e contenu à lire) */
+    /* background-attachment: fixed; */
+    /* si besoin, je peut encore plus la centrer (voir la différence en commentant ci-dessous */
+    /* background-position: center; */
+
+    /* un pattern, petit par définition, sera multipliée et recouvrira volontairement tout l'ecran */
+    background-image: url(../img/pattern.jpg);
+
+    /* pour ne répéter le pattern que sur une seule ligne, à l'horizontale */
+    /* background-repeat: repeat-x; */
+    /* répétition, mais sur la verticale (axe des y) */
+    /* background-repeat: repeat-y; */
+
+    
+}
+
+.container{
+    /* une taille de 50% pour le main (classe container) par rapport à body (largeur d'ecran) */
+    width: 50%;
+    /* je centre avec auto, et je supprime en plus la taille des marges par défaut (leur valeur désormais sera de 0) */
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 3%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+h1{
+    background: url(../img/separateur.png) repeat-x bottom;
+    text-align: center;
+    margin-bottom: 5%;
+    padding-bottom: 1rem;
+}
+
+p{
+    font-size:large;
+}

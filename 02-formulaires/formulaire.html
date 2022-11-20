@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divers inputs formulaire</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- un formulaire doit se declarer entre un <form> ouvrant et un </form> fermant -->
+    <!-- les attributs method et action seront a renseigner en PHP (inutile en HTML, pas dynamique) -->
+    <!-- enctype et ce qu'il contient permettent d'uploder des fichiers (photos, sons, texte, pdf, videos etc...) -->
+    <form method="" action="" enctype="multipart/form-data">
+
+        <!-- le label et le input sont liés (le premier étant le titre de l'autre (le champs à remplir)) -->
+        <label for="pseudo">Pseudo *</label><br>
+        <!-- le for de label et le id de input doivent contenir la même information pour etre utiles
+        name n'est pas important en HTML, mais indispensable en PHP (lui donner le même nom que for et id, très pratique) -->
+        <!-- required indique que l'input (le champs à remplir) doit etre renseigné obligatoirement, sinon, le  formulaire ne peut envoyer les informations -->
+        <input type="text" id="pseudo" name="pseudo" placeholder="Votre pseudo" required>
+        <br>
+        <!-- deuxième label/input pour un mot de passe -->
+        <label for="password">Mot de passe *</label><br>
+        <!-- pour un mot de passe, il faut changer le type text en type password (pour crypter le mot de passe, qu'il ne soit pas lisible par un curieux) -->
+        <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+        <br>
+        <!-- troisième label/input pour une adresse mail -->
+        <label for="email">Adresse mail *</label><br>
+        <!-- pour une adresse mail, modifier le type text en type email. Le navigateur bloquera ainsi l'envoi de données si la valeur renseignée ne correspond pas a un mail (avec @, avec .com ou .fr etc...) -->
+        <input type="email" id="email" name="email" placeholder="Votre adresse mail" required><br>
+
+        <!-- label/input pour téléverser (uploader) un fichier (par exemple envoyer son CV pour postuler en ligne) -->
+        <label for="cv">Téléversez votre CV</label><br>
+        <!-- le type sera file (pour photo, mp3, pdf etc...) -->
+        <input type="file" id="cv" name="cv"><br>
+
+        <label for="question">Quelle destination choisissez vous ?</label><br>
+        <p>
+            <input type="checkbox" name="question">Chine
+            <input type="checkbox" name="question" checked>Australie
+            <input type="checkbox" name="question">Corée
+        </p>
+        <!-- les checkbox et radio permettent les deux de cocher des options pour les valider -->
+        <!-- la différence est qu'un checkbox permet de sélectionner plusieurs choix en même temps, tandis quel e radio impose de ne choisir qu'une possibilité -->
+        <!-- il faut donc savoir les utiliser selon les cas -->
+        <label for="question">Quel transport choisissez vous ?</label><br>
+        <p>
+            <input type="radio" name="question">Train
+            <input type="radio" name="question" checked>Avion
+            <input type="radio" name="question">Bateau
+        </p>
+
+        <!-- un selecteur qui ouvre une liste déroulante -->
+        <label for="choisirVille">La ville de vos rêves</label><br>
+        <select name="choisirVille" id="choisirVille">
+            <option value="">Choisissez</option>
+            <option value="paris">Paris</option>
+            <option value="alger">Alger</option>
+            <option value="barcelone">Barcelone</option>
+        </select>
+
+        <!-- champs pour laisser un commentaire -->
+        <br><label for="commentaire">Commentaire</label><br>
+        <textarea name="commentaire" id="commentaire" cols="50" rows="8">Qu'avez vous pensé de nos services ?</textarea><br>
+
+        <!-- le bouton de validation du formulaire doit etre de type submit -->
+        <!-- lui donner un nom (name="") n'est pas indispensable, sauf s'il y a plusieurs formulaires sur la même page. Il faudra les distingier, sinon, ils s'activeront tous en même temps
+        value="" va envoyer le texte dans le bouton -->
+        <input type="submit" name="inscription" value="Valider"><br>
+        <!-- pour réinitialiser un formulaire, le type du bouton sera reset -->
+        <input type="reset" name="annulation" value="Vider le formulaire">
+        <p><strong>Les champs marqués d'une * sont obligatoires</strong></p>
+
+    </form>
+    
+</body>
+</html>

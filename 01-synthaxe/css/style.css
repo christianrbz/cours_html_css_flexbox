@@ -1,0 +1,53 @@
+/* lien import pour une police à positionner en haut de son fichier css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&family=Roboto&display=swap');
+
+body{
+    background-color: antiquewhite;
+}
+
+/* puis on utilise les propriétés de la police pour la balise qui nous interesse */
+h2{
+    font-family: 'Noto Sans Mono', monospace;
+    font-size: 2rem;
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
+}
+
+ul.navigationEquipe{
+    /* donne une marge externe de 3 rems vers le haut (pour donner un écart avec le titre au-dessus */
+    /* margin-top: 3rem; */
+    /* donner une marge externe de 3rems vers le bas (bas d'ecran, footer etc... */
+    /* margin-bottom: 3rem; */
+    /* margin qui va cibler d'abord le haut (3rem) puis à droite (0 rem) puis le bas (3rem) et enfin à gauche (0 rem) sens des aiguilles d'une montre */
+    margin: 3rem 0 3rem 0;
+}
+
+ul.navigationEquipe li{
+    /* pour que la liste ne s'affiche plus en type block ( à la verticale) mais à l'horizontale (type inline) comme une barre de navigation */
+    display: inline;
+    /* permet de supprimer les puces des listes */
+    list-style: none;
+    /* ne fonctionne pas pour retirer le souligné, il faut cibler la balise <a> */
+    /* text-decoration: none; */
+}
+
+ul.navigationEquipe li a{
+    /* pour supprimer les traits sous les liens */
+    text-decoration: none;
+    /* taille de la police, les rem et em sont des unités de mesure responsive (alors que les pixels ne sont pas responsives. Ils ne s'adaptent pas à toutes kes largeurs d'ecrans */
+    font-size: 2rem;
+    /* padding (marge interne) de 0 en haut et en bas et de 0.8rem a droite et a gauche */
+    padding: 0 .8rem 0 .8rem;
+    /* une marge externe (a droite et a gauche de 1rem) pour séparer les onglets entre eux */
+    margin: 0 1rem 0 1rem;
+    /* pour donner une bordure (ressemble à un bouton cliquable) .1px est pour la largeur de la bordure. solid pour sa mise en forme (trait continu plutot que des tirets ou des pointillés). black pour sa couleur */
+    border: 1px solid black;
+    /* le border radius  va donner un arrondi  a la bordure, plutot qu'un angle droit (tester avec une valeur de 50% pour avoir une meilleur idée) */
+    border-radius: 5%;
+
+    /* donne une ombre au bouton. Les valeurs vont donner l'angle de l'ombre, ainsi que la diffusion */
+    box-shadow: 1px 1px 5px black;
+}

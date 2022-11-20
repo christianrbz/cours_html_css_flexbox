@@ -1,0 +1,44 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 50%;
+    margin: auto;
+}
+
+table{
+    border: 4px solid #483d8b;
+    /* border-collapse permet d'éviter un effet visuel avec deux bordures (epaisseur ou contigues). Il va les fusionner pour un meilleur rendu */
+    border-collapse: collapse;
+    /* largeur (width) du tableau dans son bloc parent <body> */
+    width: 90%;
+    margin: 2rem;
+}
+
+/* mise en forme commune des hauts et bas du tableau */
+thead, tfoot{
+    background-color: #e6e6fa;
+    border: 2px solid #6a5acd;
+}
+
+th{
+    /* bordure pas solid, mais dotted (des pointillés au lieu d'une bordure unie */
+    border: 1px dotted #6a5acd;
+    padding: 4px;
+    background-color: #e6e6fa;
+    width: 25%;
+}
+
+td{
+    border: 1px dotted #6a5acd;
+    text-align: center;
+    padding: 5px;
+}
+/* pour donner une mise en page différente aux infos comprises dans la première colonne (donc les premiers <td>) */
+td:first-child{
+    text-align: left;
+    background-color: #e6e6fa;
+}
+
+caption{
+    margin: .8rem 0 .8rem 0;
+    font-weight: bold;
+}

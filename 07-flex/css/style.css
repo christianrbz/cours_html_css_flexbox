@@ -1,0 +1,232 @@
+h1{
+    text-align: center;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.container{
+    /* 960px, de large pour mes sections, de classe container, représente un breakpoint (point de rupture) pour passer d'une taille d'ecran vers une autre. C'est aussi une valeur facilement divisible, toujours pour s'adapter vers les autres ecrans */
+    /* width: 960px; */
+    width: 70%;
+    /* pour centrer le bloc, après avoir reçu l'information concernant la laergeur de ce bloc */
+    margin: 0 auto;
+    /* mes trois div (classe item) qui s'affichaient à la vertivale, avec display:flex vont désormais s'afficher à l'horizontale */
+    display: flex;
+    /* pour délimiter le container, pour que les tests soient mieux interprétables */
+    border: 1px solid black;
+}
+
+.item{
+    background-color: rgb(209, 209, 209);
+    /* une hauteur minimum pour chaque bloc (car pas beaucoup de contenu pour le test) */
+    min-height: 100px;
+    border: 1px solid black;
+    text-align: center;
+    /* pour centrer le texte à la verticale dans son bloc */
+    line-height: 100px;
+    margin: 1%;
+    font-size: 1.2rem;
+    /* flex:auto est une propriété qui va permettre aux divs enfants de la classe container de se répartir l'intégralité de la largeur de leur bloc parent, de manière égale entre chaque, qlq soit leur nombre. cette répartion sera toujours égale si on en reste là pour la syntaxe */
+    flex: auto;
+}
+
+.item4-1{
+    /* une taille prédéfinie à présent. Ce bloc ne récupérera pas une largeur selon le nombre. Elle est définie en dur ici */
+    width: 500px;
+}
+
+.item5-1{
+    flex-grow: 1;
+}
+
+.item5-2{
+    flex-grow: 2;
+}
+
+.item5-3{
+    flex-grow: 4;
+}
+
+.item6-1{
+    order: 3;
+}
+
+.item6-2{
+    order: 2;
+}
+
+.item6-3{
+    order: 2;
+}
+
+.item6-4{
+    order: 1;
+}
+
+.container7{
+    flex-direction: row-reverse;
+}
+
+.container8{
+    /* pour centrer les blocs enfants dans leur bloc parent */
+    justify-content: center;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item8-1, .item8-2, .item8-3, .item8-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    /* attention, dans un même bloc parent, désormais tous ces enfants devront avoir la même logique (une taille définie + flex:none. Si un seul des blocs enfants ne suit pas cette logique, alors tous les autres blocs en seront écartés aussi (je reviens pour toute la ligne à flex:auto) */
+    width: 15%;
+    flex:none;
+}
+
+.container9{
+    /* pour aligner à droite les blocs enfants dans leur bloc parent */
+    justify-content: end;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item9-1, .item9-2, .item9-3, .item9-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container10{
+    /* pour aligner à gauche les blocs enfants dans leur bloc parent */
+    justify-content: start;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item10-1, .item10-2, .item10-3, .item10-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container11{
+    justify-content: space-between;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item11-1, .item11-2, .item11-3, .item11-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container12{
+    justify-content: space-around;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item12-1, .item12-2, .item12-3, .item12-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container13{
+    justify-content: space-evenly;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item13-1, .item13-2, .item13-3, .item13-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container14{
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item14-1, .item14-2, .item14-3, .item14-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container15{
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.item15-1{
+    width: 15%;
+    flex:none;
+    align-self: flex-start;
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item15-2, .item15-3{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.item15-4{
+    width: 15%;
+    flex:none;
+    align-self: flex-end;
+}
+
+.container16{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* height: 30rem; */
+}
+
+/* je donne les mêmes propriétés a tous les enfants de la classe container container8 */
+.item16-1, .item16-2, .item16-3, .item16-4{
+    /* je donne une taille spécifique, et pour qu'elle soit acceptée, j'annule le flex-auto global pour la classe item avec le flex:none en dessous */
+    width: 15%;
+    flex:none;
+}
+
+.container17{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.container17 .item{
+    width: 15%;
+    flex: none;
+}
+
+
+.container18{
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 30rem;
+}
+
+.item18{
+    background-color: rgb(209, 209, 209);
+    width: 15%;
+    min-height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.2rem;
+    /* flex:auto est une propriété qui va permettre aux divs enfants de la classe container de se répartir l'intégralité de la largeur de leur bloc parent, de manière égale entre chaque, qlq soit leur nombre. cette répartion sera toujours égale si on en reste là pour la syntaxe */
+    flex: 1;
+}
+
+.item18-1{
+    flex:2;
+}
+

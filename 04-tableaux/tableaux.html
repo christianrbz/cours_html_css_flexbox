@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1>Syntaxe des tableaux en HTML</h1>
+
+    <p>Tout tableau, doit etre declaré dans une balise &lt;table> (consigne de la W3C)</p>
+
+    <p>Tout tableau doit obligatoirement comporter deux éléments: un &lt;thead> et un &lt;tbody>. Il existe un troisième élément, mais pas obligatoire, seulement si les informations affichées dans le tableau l'exigent. C'est &lt;tfoot>. D'ailleurs, dans les anciens scripts, il fallait declarer tfoot sous thead, mais au dessus de tbody (ce n'est plus le cas aujourd'hui, voir le mdn)</p>
+    <p>Dans thead, je declare une ligne &lt;tr> dans laquelle je vais insérer les noms des colonnes &lt;th></p>
+    <p>Dans tbody, je vais declarer autant de lignes &lt;tr> que j'aurais de données à insérer dans le tableau, puis des &lt;td> pour chaque colonne</p>
+
+    <table>
+
+        <caption>Ventes de la semaine</caption>
+
+        <thead>
+            <tr>
+                <th>Jour</th>
+                <th>Smartphones</th>
+                <th>Tablettes</th>
+                <th>Portables</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Lundi</td>
+                <td>4</td>
+                <td>6</td>
+                <td>3</td>
+            </tr>
+            <tr>
+                <td>Mardi</td>
+                <td>8</td>
+                <td>7</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Mercredi</td>
+                <td>1</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Jeudi</td>
+                <td>4</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>Vendredi</td>
+                <td>5</td>
+                <td>9</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>Total</td>
+                <td>22</td>
+                <td>30</td>
+                <td>19</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+</body>
+</html>

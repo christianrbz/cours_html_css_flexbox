@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les balises complexes</title>
+
+    <!-- cdn vers roboto google fonts je prends le link pour le head -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h2>Les balises de mises en valeur</h2>
+
+    <!-- les balises de mise en valeur, comme la balise <title> dans <head>, comme les titres (h1, h2 etc...) servent au référencement. Ce sont des messages envoyés à Google pour lui dire, tel mot ou groupe de mots est important. Il faut donc les mettre en valeur visuellement, insister dessus pour l'utilisateur -->
+        <!-- leur ordre d'importance est decroissant -->
+        <!-- <strong> est la plus importante. Elle va mettre en gras ce qu'elle entoure -->
+    <!-- attention, on ne met pas en gras avec <strong> parce que le texte sera plus joli -->
+    <p>Bonjour, ceci est mon premier fichier HTML, alors, <strong>soyez indulgents !</strong></p>
+    <!-- deuxième balise de mise en valeur <em>, qui va mettre le texte en italique -->
+    <p>Bonjour, ceci est mon premier fichier HTML, alors, <em>soyez indulgents !</em></p>
+    <!-- la moins importante des balises de mise en valeur est <mark>. Elle surligne le texte qu'elle entoure. Elle n'est  pas très utilisée -->
+    <p>Bonjour, ceci est mon premier fichier HTML, alors, <mark>soyez indulgents !</mark></p>
+
+    <h2>Les listes</h2>
+    <h3>Les listes non ordonnées</h3>
+    <!-- pour les listes non ordonnées (puces) on utilise la balise <ul> puis les <li> -->
+    
+        <ul>
+            <li>Chats</li>
+            <li>Chiens</li>
+            <li>Lapins</li>
+            <li>Moutons</li>
+            <li>Poules</li>
+        </ul>
+
+    <h3>Les listes ordonnées</h3>
+
+    <!-- les balises ordonnées se declarent dans un <ol> -->
+        <ol>
+            <li>Poissons</li>
+            <li>Chevaux</li>
+            <li>Vaches</li>
+            <li>Canards</li>
+            <li>Coqs</li>
+        </ol>
+
+    <h2>Les couleurs</h2>
+        <!-- génération de couleurs via du css in-line, interdit -->
+    <p style="color:red;">H</p>
+    <p style="color:rgb(198, 198, 251)">T</p>
+    <p style="background-color: #dc143c">M</p>
+    <p style="background-color: black; color: yellow">L</p>
+
+    <h2>La balise &lt;a>  </h2>
+
+    <h3>Maillage interne</h3>
+    <!-- c'est dans l'attribut href de la balise <a> que l'on renseigne l'URL a atteindre -->
+    <!-- on crée un lien cliquable -->
+    <a href="02_balises_bases.html">Vers le fichier 02</a>
+
+    <h3>Maillage externe</h3>
+    <!-- le maillage externe désigne un lien vers une page d'un autre site que le notre (contrairement au maillage interne, un lien vers une autre page de notre site) -->
+    <!-- dans le cas d'un maillage externe, il faut ajouter l'attribut target, rensigné de _blank. Cela permet à l'utilisateur d'aller sur la page désirée, sans pour autant quitter votre site (par contre, pas besoin de cet attribut pour du maillage interne, inutile) -->
+    <a href="https://www.lequipe.fr/" target="_blank">Lien vers le site l' Equipe</a>
+
+    <h2>Barre de navigation</h2>
+
+    <!-- un nom de classe pour impacter cette liste en css mais pas les autres -->
+    <ul class="navigationEquipe">
+        <li><a href="https://www.lequipe.fr/">Football</a></li>
+        <li><a href="https://www.lequipe.fr/">Rugby</a></li>
+        <li><a href="https://www.lequipe.fr/">Tennis</a></li>
+        <li><a href="https://www.lequipe.fr/">Voile</a></li>
+        <li><a href="https://www.lequipe.fr/">Volley</a></li>
+        <li><a href="https://www.lequipe.fr/">Basket-Ball</a></li>
+    </ul>
+
+    <h2>La balise image &lt;img></h2>
+
+    <!-- la balise img est ce que l'on appelle une balise orpheline, c'est à dire auto-fermante -->
+    <!-- dans l'attribut src (pour source) on donne le chemin (physique) pour que le navigateur accède au fichier image (ici dans le dossier img) -->
+    <!-- dans l'attribut alt, on ecrit un descriptif de l'image -->
+    <!-- si l'image ne peut etre affichée, le navigateur ne la remplacera pas par une icone brisée, mais par ce texte alternatif. Ce texte texte sera aussi disponible en audio description pour les personnes mal-voyantes équipées de matériel adapté -->
+    <!-- pour la balise alt, Google demande (pour améliorer le référencement) un contenu riche (et surtout pas de style télégraphique, comme image chat légo) -->
+    <!-- l'attribut title, pour le référencement, va ajouter une info-bulle (affichant le texte) au passage de la souris sur l'image -->
+    <!-- la balise figure est demandée si on veut utiliser la balise figcaption en plus de <img>. figaption apportera une mise en forme pour du texte en légende de la photo -->
+    <!-- loading lazy permet de charger l'image seulement lorsqu'lle doit apparaitre, et non pas charger la totalité des images de la page en même temps. Ce qui ralentirait le chargement global de la page -->
+    <figure>
+        <img src="img/chat.jpeg" alt="Photo d'un chat construit en légos, qui salue" title="Photo d'un chat construit en légos, qui salue" loading="lazy">
+        <figcaption>Sculpture en légos de Rodin, nommée " Le chat qui salue"</figcaption>
+    </figure>
+
+    
+    
+</body>
+</html>

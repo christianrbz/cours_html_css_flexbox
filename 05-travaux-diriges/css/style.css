@@ -1,0 +1,120 @@
+/* header */
+header{
+    /* valeurs négatives tolérées. Elles permettent d'enlever un surplus de marge (pourtant à zéro). Sinon, faire un reset des marges et padding avec un selecteur universel */
+    margin: -1rem -1rem 0 -1rem;
+    padding: 1rem 0 1rem 0;
+    background-color: gainsboro;
+}
+
+/* ce qui est particulier à like-footer, qu'il ne partage pas avec footer */
+.like-footer{
+    font-size: 3rem;
+}
+
+nav{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* une largeur à <ul> (50%) pour centrer la barre de navigation à la ligne d'en dessous avec margin: auto */
+ul.navigation{
+    width: 50%;
+    margin: auto;
+}
+
+nav ul li{
+    /* pourm ettre les <li> à l'horizontale alors que leur comportement normal est à la verticale */
+    display: inline;
+    background-color: rgb(252, 248, 242);
+    border:1px solid black;
+    /* pour arrondir les angles des bordures */
+    border-radius: 5%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    margin: 0 1rem 0 1rem;
+}
+
+/* :hover permet de donner un aspect spécifique à un élément (ici, le bouton de navigation) quand la souris passe en survol (au dessus du bouton) */
+nav ul li:hover{
+    background-color: black;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:black;
+}
+nav ul li a:hover{
+    text-decoration: none;
+    color:rgb(253, 244, 231);
+}
+
+/* la classe active. Le bouton actif aura une apparence différente des autres boutons (qui ne sont pas actifs...leur page ne s'affiche pas en ce moment */
+.active{
+    background-color: black;
+}
+.active a{
+    color:rgb(253, 244, 231);
+    background-color: black;
+}
+
+/* header */
+
+/* main */
+main{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 3rem;
+}
+h1{
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+form{
+    margin-left: 2rem;
+}
+
+label{
+    font-size: 2rem;
+}
+
+input{
+    margin:1rem 0 2rem 0;
+}
+
+.input{
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    padding: 1rem;
+}
+
+select{
+    margin:1rem 0 2rem 0;
+}
+
+option{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+textarea{
+    margin:1rem 0 2rem 0;
+}
+/* fin de main */
+
+/* footer */
+/* ce qu'il y a de commun entre footer et la classe like-footer */
+footer, .like-footer{
+    background-color: gainsboro;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+/* ce qui est particulier a footer mais pas à like-footer */
+footer{
+    font-size: 2rem;
+    padding: 1rem 0 1rem 0;
+    margin: 3rem -1rem -1rem -1rem;
+}
+/* fin de footer */

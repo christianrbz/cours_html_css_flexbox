@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact SAV</title>
+
+    <link rel="stylesheet" href="css/style_td.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- Titre du site -->
+        <h1>SAV</h1>
+        <!-- Logo et titre aligné -->
+        <!-- Le logo est un lien vers la page d'accueil -->
+        <a href="#"><img src="img/logo.png" alt="Logo entreprise" title="Logo entreprise" loading="lazy"></a>
+        <h2>Formulaire de contact</h2>
+        <!-- Barre de navigation -->
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="contact.html" class="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulaire -->
+    <main>
+        <form  method="" action="" enctype="multipart/form-data">
+            <!-- Pseudo -->
+            <label for="pseudo">Pseudo</label><br>
+            <input type="text" id="pseudo" name="pseudo" placeholder="Votre pseudo" required><br>
+
+            <!-- Email -->
+            <label for="email">Adresse mail</label><br>
+            <input type="email" id="email" name="email" placeholder="Votre adresse mail" required><br>
+
+            <!-- Selecteur -->
+            <label for="choisirVille">Quel est le sujet de votre message ?</label><br>
+            <select name="choisirVille" id="choisirVille" required>
+                <option value="">Choisissez</option>
+                <option value="Abonnement">Abonnement</option>
+                <option value="Facture">Facture</option>
+                <option value="Autre">Autre</option>
+            </select>
+
+            <!-- Commentaire -->
+            <br><label for="commentaire">Commentaires</label><br>
+            <textarea name="commentaire" id="commentaire" cols="50" rows="8" required></textarea><br>
+
+            <!-- Bouton valider le formulaire -->
+            <input class="bouton" type="submit" name="inscription" value="Valider le formulaire"><br>
+            <!-- Bouton reset qui sera aligné avec le bouton valider  -->
+            <input class="bouton" type="reset" name="annulation" value="Vider le formulaire">
+            <!-- Consigne du formulaire -->
+            <p><strong>Tous les champs sont obligatoires</strong></p>
+        </form>
+
+    </main>
+
+    <footer>
+        
+    </footer>
+
+
+</body>
+
+</html>

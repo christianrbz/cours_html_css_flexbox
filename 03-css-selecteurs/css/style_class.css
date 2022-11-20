@@ -1,0 +1,51 @@
+/* pour cibler une classe (codée dans le fichier html) je dois d'abord l'appeler avec le signe . (point) puis le nom de la classe (attention à la casse, c'est sensible à la classe) */
+
+.zone1{
+    color: rgb(134,79,12);
+    /* je peux récupérer des polices de caractères directement dans le css sans aller en charger une de google font */
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.zone2{
+    color: #d61e00;
+    /* donne du gras aux caractères */
+    font-weight: bold;
+}
+
+span.lime{
+    color: green;
+}
+
+/* un identifiant est appelé avec le signe # */
+#zone3{
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+#zone3:after{
+    content: " Je viens à la suite";
+    color: blueviolet;
+}
+/* les pseudo classes :after et :before permettenrt d'insérer en CSS du contenu avant ou après le contenu défini dans le fichier html */
+#zone3:before{
+    content: "Moi, j'arrive avant ";
+    color: aqua;
+}
+
+.zone4{
+    color: rgb(99, 5, 122);
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* pas besoin de faire appel à .zone4 pour cibler ma liste, c'est la seule dans le fichier html, je l'appelle directement */
+li:first-child{
+    background-color: antiquewhite;
+    color: blue;
+}
+
+li:nth-child(2){
+    background-color: beige;
+    text-decoration: underline;
+    color: brown;
+}
