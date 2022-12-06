@@ -1,1 +1,1 @@
-Cours sur le HTML CSS et le Flexbox
+Cours avec Doranco sur le HTML, CSS et CSS Flexbox
